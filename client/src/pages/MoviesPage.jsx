@@ -7,7 +7,9 @@ export default function MoviesPage() {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     async function fetchMovies() {
-      const res = await fetch("http://localhost:8080/movies");
+      const res = await fetch(
+        "https://week-7-project-ptm6.onrender.com/movies"
+      );
       const data = await res.json();
       setMovies(data);
     }

@@ -6,7 +6,9 @@ export default function GenresPage() {
   const [genres, setGenres] = useState([]);
   useEffect(() => {
     async function fetchGenres() {
-      const res = await fetch("http://localhost:8080/genres");
+      const res = await fetch(
+        "https://week-7-project-ptm6.onrender.com/genres"
+      );
       const data = await res.json();
       setGenres(data);
     }

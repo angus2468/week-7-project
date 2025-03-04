@@ -8,7 +8,9 @@ export default function GenrePage() {
 
   useEffect(() => {
     async function fetchGenre() {
-      const res = await fetch(`http://localhost:8080/genres/${id}`);
+      const res = await fetch(
+        `https://week-7-project-ptm6.onrender.com/genres/${id}`
+      );
       const data = await res.json();
       setGenreInfo(data.rows[0]);
     }
@@ -16,7 +18,7 @@ export default function GenrePage() {
 
     async function fetchMovie() {
       const response = await fetch(
-        `http://localhost:8080/genres/${id}?include_movies=true`
+        `https://week-7-project-ptm6.onrender.com/genres/${id}?include_movies=true`
       );
       const dataMovies = await response.json();
       setMovies(dataMovies.movies);

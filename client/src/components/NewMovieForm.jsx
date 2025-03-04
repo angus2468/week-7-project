@@ -6,13 +6,16 @@ export default function NewMovieForm() {
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      const result = await fetch(`http://localhost:8080/movies`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(movieData),
-      });
+      const result = await fetch(
+        `https://week-7-project-ptm6.onrender.com/movies`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(movieData),
+        }
+      );
       const message = await result.json();
       console.log(message);
     } catch (error) {
