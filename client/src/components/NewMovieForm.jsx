@@ -6,7 +6,7 @@ export default function NewMovieForm() {
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      const result = await fetch(`http://localhost:7070/movies`, {
+      const result = await fetch(`http://localhost:8080/movies`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

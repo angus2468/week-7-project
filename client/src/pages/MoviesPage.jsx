@@ -18,6 +18,7 @@ export default function MoviesPage() {
       <NavBar />
       <section>
         <h1>Here are all the Movies:</h1>
+        <p>Click one to go to the about page for each movie</p>
         {movies.map((movie) => (
           <div key={movie.id}>
             <Link to={`/movies/${movie.id}`} className="button">
